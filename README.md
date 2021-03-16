@@ -1,6 +1,8 @@
 # hacky-time
 
 ## todo:
+- css animation for sidebar?
+- is the sidebar a component?
 - make barebones components and make sure ui build works correctly
 - make login differentiation
 
@@ -16,3 +18,6 @@
 
 ## nice to have details:
 - "YOU ARE HERE" scrolls out from location tracker icon on hover (desktop)
+
+## questions:
+- is there a point in having a break after every case statement in js if each statement returns beforehand for style points

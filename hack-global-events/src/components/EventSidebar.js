@@ -3,8 +3,7 @@ import React from "react";
 // import '../styles/global.css';
 import { Link } from 'react-router-dom'
 
-function EventCard({event}){
-
+function EventCard(){
   return(
     <Link>
     <h3> {event.title} </h3>
