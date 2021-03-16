@@ -1,7 +1,5 @@
 .card{
   margin: 0 auto;
- 
-
   max-width: 18em;
   min-height: 3em;
   background: #F5C6BF;
@@ -24,4 +22,25 @@
   margin: 0;
   font-weight: normal;
   color: #0C5E96;
+}
+
+.activity-card{
+  background: #F5C6BF;
+  background: linear-gradient(90deg, 
+                            #F5C6BF 0%, 
+                            #F49F98 100%);
+}
+
+.tech_talk-card{
+  background: #BEE2EA;
+  background: linear-gradient(90deg, 
+                            #BEE2EA 0%, 
+                            #7ACDE7 100%);
+}
+
+.workshop-card{
+  background: #AFEAA6;
+  background: linear-gradient(90deg, 
+                            #AFEAA6 0%, 
+                            #7ACDA9 100%);
 }

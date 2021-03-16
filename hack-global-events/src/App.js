@@ -38,7 +38,6 @@ class App extends React.Component {
     return ( 
       <div> {/*leave this here*/}
       <Header />   
-
       <div className="events-container">
       <EventCard event={this.event1}/> 
       </div>

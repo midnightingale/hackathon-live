@@ -2,10 +2,10 @@ import React from "react";
 import "../styles/typetag.css";
 
 function TypeTag({type}){
-  const [type, setType] = useState(getType(type));
-
   return(
-    <div className="type-tag">{type}</div>
+    <div className={"type-tag " + type}>
+      {getType(type)}
+    </div>
   )
 }
 

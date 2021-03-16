@@ -10,6 +10,18 @@
   font-weight: normal;
   right: 0px;
   bottom: 0px;
- 
+  letter-spacing: 0.5px;
   font-size: .7em;
+}
+
+.activity{
+  background-color: #ED767A;
+}
+
+.tech_talk{
+  background-color: #44ACDB;
+}
+
+.workshop{
+  background-color: #5ABCAA;
 }
