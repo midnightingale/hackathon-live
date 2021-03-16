@@ -1,0 +1,15 @@
+h1{
+  letter-spacing: 5px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.header-container{
+  text-align: center;
+  margin: 40px;
+}
+
+.logo-image{
+  width: 100px;
+  height: auto;
+}

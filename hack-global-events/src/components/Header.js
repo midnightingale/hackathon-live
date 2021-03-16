@@ -1,11 +1,12 @@
 import React from "react";
 import "../styles/header.css";
 import '../styles/global.css';
-import { Link } from 'react-router-dom'
+import hgi from "../assets/logo.svg";
 
 function Header({type}){
   return(
-    <div>
+    <div className="header-container">
+      <img src={hgi} className="logo-image"/>
       <h1>events</h1>   
     </div>
   )
