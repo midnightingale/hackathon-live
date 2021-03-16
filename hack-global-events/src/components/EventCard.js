@@ -1,14 +1,16 @@
 import React from "react";
-// import "../styles/eventcard.css";
-// import '../styles/global.css';
+import "../styles/eventcard.css";
 import { Link } from 'react-router-dom'
+import TypeTag from "./TypeTag";
 
 function EventCard({event}){
 
   return(
-    <Link>
-    <h3> {event.title} </h3>
-    <TypeTag type={events.event_type}/>
-    </Link>
+    <div className="card">
+    <h3 className="event-name"> {event.name} </h3>
+    <TypeTag type={event.event_type}/>
+    </div>
   )
 }
+
+export default EventCard;

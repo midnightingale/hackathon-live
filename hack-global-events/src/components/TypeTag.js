@@ -1,21 +1,23 @@
 import React from "react";
-// import "../styles/typetag.css";
-// import '../styles/global.css';
-import { Link } from 'react-router-dom'
+import "../styles/typetag.css";
 
 function TypeTag({type}){
+  const [type, setType] = useState(getType(type));
+
   return(
-    <div> getType(type) </div>
+    <div className="type-tag">{type}</div>
   )
 }
 
 function getType(typeString){
   switch (typeString) {
     case "workshop":
-      return "Workshop";
+      return "workshop";
     case "activity":
-      return "Activity";
+      return "activity";
     case "tech_talk":
-      return "Tech Talk";
+      return "tech talk";
   }
 }
+
+export default TypeTag;

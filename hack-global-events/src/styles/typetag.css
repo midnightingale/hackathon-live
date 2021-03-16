@@ -1,0 +1,15 @@
+.type-tag{
+  display: inline-block;
+  position: absolute;
+
+  padding: .3em .7em;
+  margin: 0.5em;
+  border-radius: 100px;
+  color:rgb(255, 255, 255);
+  background-color: #ED767A;
+  font-weight: normal;
+  right: 0px;
+  bottom: 0px;
+ 
+  font-size: .7em;
+}

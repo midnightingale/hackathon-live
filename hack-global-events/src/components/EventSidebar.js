@@ -1,6 +1,5 @@
 import React from "react";
 // import "../styles/eventcard.css";
-// import '../styles/global.css';
 import { Link } from 'react-router-dom'
 
 function EventCard(){
