@@ -1,17 +1,23 @@
 .type-tag{
   display: inline-block;
-  position: absolute;
-
   padding: .3em .7em;
-  margin: 0.5em;
-  border-radius: 100px;
   color:rgb(255, 255, 255);
+  border-radius: 100px;
   background-color: #ED767A;
   font-weight: normal;
+}
+
+.main-page-tt{
+  position: absolute;
+  margin: 0.5em;
   right: 0px;
   bottom: 0px;
   letter-spacing: 0.5px;
   font-size: .7em;
+}
+
+.sidebar-tt{
+  font-size: large;
 }
 
 .activity{

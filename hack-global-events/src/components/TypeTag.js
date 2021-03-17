@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/typetag.css";
 
-function TypeTag({type}){
+function TypeTag({type, location}){
   return(
-    <div className={"type-tag " + type}>
+    <div className={"type-tag " + type + " " + location}>
       {getType(type)}
     </div>
   )
