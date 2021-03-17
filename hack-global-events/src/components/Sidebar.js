@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/sidebar.css";
 import arrow from "../assets/back-arrow.svg";
 import TypeTag from "./TypeTag";
+import Speaker from "./Speaker";
 
 function Sidebar({isOpen = false, event, close}){
   let sidebarVisibility = (isOpen === true) ? "sidebar" : "inactive";
@@ -13,25 +14,34 @@ function Sidebar({isOpen = false, event, close}){
       <TypeTag type={event.event_type} location="sidebar-tt"/>
       
       <h3>Speakers</h3>
-      {/*{this.state.events.map((event) => (
-            <EventCard event={event} 
-                       update={() => { 
-                          this.setState({activeEvent: event,
-                                         sidebarOpen: true})
-                       }}/>
-          ))}*/}
+      {/*event.speakers.map((speaker) => (
+        <Speaker name={speaker.name}
+                 pic={speaker.profile_pic}/>
+      ))*/}
       <h3>Description</h3>
       <h3>Related Events</h3>
+      <a target="_blank" href={getURL(event)} className="attend-button">
+        attend
+      </a>
     </div>
   );
 }
 
-//helper function to return time of event
+//returns time of event
 function getTime(unixTimestamp){
   let d = new Date(unixTimestamp);
   let minutes = (d.getMinutes() === 0) ? 
                 "00" : d.getMinutes();
   return d.getHours() + ':' + minutes;
+}
+
+//returns correct (public/private) URL for event
+function getURL(event, permission = "public"){
+  if(permission === "public"){
+    return event.public_url;
+  } else if (permission === "private"){
+    return event.private_url;
+  }
 }
 
 export default Sidebar;

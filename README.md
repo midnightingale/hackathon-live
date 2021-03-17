@@ -1,10 +1,9 @@
 # hacky-time
 
 ## todo:
-- css animation for sidebar?
-- is the sidebar a component?
-- make barebones components and make sure ui build works correctly
+- css animation for sidebar
 - make login differentiation
+  - pass logged-in info to sidebar
 
 
 ## notes:

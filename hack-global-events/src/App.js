@@ -44,12 +44,12 @@ class App extends React.Component {
         />  
         <div className="events-container"> 
           {this.state.events.map((event) => (
-            <EventCard event={event} 
-                       update={() => { 
-                          this.setState({activeEvent: event,
-                                         sidebarOpen: true})
-                          console.log(this.state.activeEvent) /*this line for debugging*/
-                       }}/>
+            <EventCard 
+              event={event} 
+              update={() => { 
+                this.setState({activeEvent: event,
+                                sidebarOpen: true})
+              }}/>
           ))}
         </div>
       </div>
