@@ -10,6 +10,7 @@ function Sidebar({isOpen = false, event, close}){
     <div className={sidebarVisibility}>
       <img src={arrow} alt="" className="back-arrow-image" onClick={close}/>
       <h1 className="sidebar-event-name">{event.name}</h1>
+      <h2 className="sidebar-event-date">{getDate(event.start_time)}</h2>
       <h2 className="sidebar-event-time">{getTime(event.start_time)} - {getTime(event.end_time)}</h2>
       <TypeTag type={event.event_type} location="sidebar-tt"/>
       
@@ -18,10 +19,13 @@ function Sidebar({isOpen = false, event, close}){
         <Speaker name={speaker.name}
                  pic={speaker.profile_pic}/>
       ))*/}
+      
       <h3>Description</h3>
+      <p className="description-body">{event.description}</p>
+
       <h3>Related Events</h3>
-      <a target="_blank" href={getURL(event)} className="attend-button">
-        attend
+      <a target="_blank" href={getURL(event)}>
+        <div className="attend-button">attend</div>
       </a>
     </div>
   );
@@ -33,6 +37,13 @@ function getTime(unixTimestamp){
   let minutes = (d.getMinutes() === 0) ? 
                 "00" : d.getMinutes();
   return d.getHours() + ':' + minutes;
+}
+
+//returns date of event
+function getDate(unixTimestamp){
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  let d = new Date(unixTimestamp);
+  return months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
 }
 
 //returns correct (public/private) URL for event

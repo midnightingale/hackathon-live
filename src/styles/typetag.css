@@ -1,7 +1,7 @@
 .type-tag{
   display: inline-block;
   padding: .3em .7em;
-  color:rgb(255, 255, 255);
+  color:#FFFFFF;
   border-radius: 100px;
   background-color: #ED767A;
   font-weight: normal;
@@ -17,7 +17,9 @@
 }
 
 .sidebar-tt{
-  font-size: large;
+  font-size: medium;
+  padding: .3em 1.5em;
+  margin: 0;
 }
 
 .activity{

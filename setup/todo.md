@@ -1,8 +1,8 @@
 ## todo:
 - add date of event to sidebar
-- make attend button same as mockup
+- center attend button
 - make speaker component
-- add in description
+- fix title overflow -- make it not dependent on vh
 - add related events as hyperlinks
 - css animation for sidebar
   - transition time
