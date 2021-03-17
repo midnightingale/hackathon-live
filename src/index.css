@@ -33,3 +33,12 @@ h1 {
   font-family: Somatic;
   font-weight: normal;
 }
+
+.main-container{
+  transition: all .3s linear;
+  width: 100%;
+}
+
+.left-shift{
+  width: 60%;
+}
