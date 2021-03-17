@@ -2,7 +2,7 @@
 
 ### Notes
 The login username is `htn`, and the password is `2021`. I made all additional assets from scratch in Adobe Illustrator.
-You can find the demo at [hgi-events repository](https://midnightingale.github.io/hgi-events/ "the GitHub pages deployment for this repository").
+You can find the demo at [the GitHub pages deployment for this repository](https://midnightingale.github.io/hgi-events/ "the GitHub pages deployment for this repository").
 
 ### Structure, Design and Tools
 I began by wireframing the app out on graph paper, and then translated it into a mockup as follows:
