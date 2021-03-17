@@ -1,3 +1,5 @@
+# A Hackathon Global Inc.™ Events Calendar
+
 ### Notes
 The login username is `htn`, and the password is `2021`. I made all additional assets from scratch in Adobe Illustrator.
 
