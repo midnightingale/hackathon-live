@@ -1,5 +1,5 @@
 .card{
-  margin: 0 auto;
+  margin: 1em auto;
   max-width: 18em;
   min-height: 3em;
   background: #F5C6BF;
@@ -8,7 +8,6 @@
                             #F49F98 100%);
   filter: drop-shadow(5px 5px 5px #3c3b7344);
   border-radius:15px;
-  
   transition: transform .2s;
   cursor: pointer;
 }
@@ -18,7 +17,7 @@
 }
 
 .event-name{
-  padding: 1em 1em 1.7em;
+  padding: 1em 1em 1.85em;
   margin: 0;
   font-weight: normal;
   color: #0C5E96;
