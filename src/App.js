@@ -39,6 +39,9 @@ class App extends React.Component {
         <Sidebar
           isOpen={this.state.sidebarOpen}
           event={this.state.activeEvent}
+          events={this.state.events}
+          changeEvent={(event) => { 
+            this.setState({activeEvent: event})}}
           close={() => { 
             this.setState({sidebarOpen: false})}}
         />  

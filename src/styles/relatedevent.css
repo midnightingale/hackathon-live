@@ -1,0 +1,6 @@
+.related-event{
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0C5E96;
+  line-height: 1.4em;
+}

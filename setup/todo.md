@@ -1,7 +1,4 @@
 ## todo:
-- add date of event to sidebar
-- center attend button
-- make speaker component
 - fix title overflow -- make it not dependent on vh
 - add related events as hyperlinks
 - css animation for sidebar

@@ -3,8 +3,9 @@ import "../styles/sidebar.css";
 import arrow from "../assets/back-arrow.svg";
 import TypeTag from "./TypeTag";
 import Speaker from "./Speaker";
+import RelatedEvent from "./RelatedEvent";
 
-function Sidebar({isOpen = false, event, close}){
+function Sidebar({isOpen = false, event, events, changeEvent, close}){
   let sidebarVisibility = (isOpen === true) ? "sidebar" : "inactive";
   //let speakers;
 
@@ -27,11 +28,19 @@ function Sidebar({isOpen = false, event, close}){
 
       <h3>Description</h3>
       <p className="description-body">{event.description}</p>
-
-      <h3>Related Events</h3>
-
-      <a target="_blank" href={getURL(event)}>
-        <div className="attend-button">attend</div>
+      
+      {event.related_events && 
+      <div>
+        <h3>Related Events</h3>
+        {event.related_events.map((re) => (
+          <RelatedEvent relatedEventId={re}
+                        events={events}
+                        changeEvent={changeEvent}/>
+        ))}
+      </div>}
+      
+      <a target="_blank" href={getURL(event)} className="attend-button">
+        <div >attend!</div>
       </a>
     </div>
   );
