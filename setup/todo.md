@@ -1,8 +1,15 @@
-# hacky-time
-
 ## todo:
+- add date of event to sidebar
+- make attend button same as mockup
+- make speaker component
+- add in description
+- add related events as hyperlinks
 - css animation for sidebar
+  - transition time
+  - left-shift main content
+- make day headers
 - make login differentiation
+  - update events list when logged in
   - pass logged-in info to sidebar
 
 
