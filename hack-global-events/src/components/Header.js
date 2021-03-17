@@ -5,7 +5,9 @@ import hgi from "../assets/logo.svg";
 function Header(){
   return(
     <div className="header-container">
-      <img src={hgi} className="logo-image"/>
+      <a href="https://hackthenorth.com/">
+        <img src={hgi} alt="HGI logo" className="logo-image"/>
+      </a>
       <h1>events</h1>   
     </div>
   )

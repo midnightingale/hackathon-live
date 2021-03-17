@@ -9,9 +9,9 @@ class App extends React.Component {
     super(props); 
     this.state = {
       events: [], 
-      loggedIn: false,
       sidebarOpen: false,
-      activeEvent: 1                
+      activeEvent: {},
+      loggedIn: false
     };
   }
 
@@ -22,7 +22,8 @@ class App extends React.Component {
           let sortedEvents = dataIn.data.events.sort(
             (a, b) => a.start_time - b.start_time
           );
-          this.setState({events: sortedEvents});
+          this.setState({events: sortedEvents,
+                         activeEvent: sortedEvents[0]});
         })
         .then(console.log(this.state));
   } 
@@ -38,7 +39,10 @@ class App extends React.Component {
         <div className="events-container"> 
           {this.state.events.map((event) => (
             <EventCard event={event} 
-                       onClick={() => this.setState({activeEvent: event.id})}/>
+                       update={() => 
+                        {console.log(event)
+                        this.setState({activeEvent: event})}
+                      }/>
           ))}
         </div>
       </div>
