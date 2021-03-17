@@ -1,24 +1,16 @@
-//password is htn2021
-
 import React from "react";
 import "../styles/loginbutton.css";
 
-function LoginButton({type, location}){
+function LoginButton(){
   return(
-    <div className={"login-button"}>
+    <div className={"login button"} onClick={openModal}>
       login
     </div>
   )
 }
 
-
-
 function openModal(){
-  document.getElementById("info-modal").style.display = "block";
-}
-
-function closeModal(){
-  document.getElementById("info-modal").style.display = "none";
+  document.getElementsByClassName("login-modal")[0].style.display = "block";
 }
 
 export default LoginButton;

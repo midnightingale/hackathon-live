@@ -3,6 +3,8 @@ import React from "react";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import EventCard from "./components/EventCard";
+import LoginButton from './components/LoginButton';
+import LoginModal from './components/LoginModal';
 
 class App extends React.Component { 
   constructor(props) { 
@@ -16,6 +18,14 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    this.grabEvents();
+  } 
+
+  componentDidUpdate(){
+    this.grabEvents();
+  }
+
+  grabEvents(){
     fetch('https://api.hackthenorth.com/v3/graphql?query={ events { id name event_type permission start_time end_time description speakers { name profile_pic } public_url private_url related_events } }')
         .then(response => response.json())
         .then(dataIn => {
@@ -23,12 +33,15 @@ class App extends React.Component {
           let sortedEvents = dataIn.data.events.sort(
             (a, b) => a.start_time - b.start_time
           );
+
           //take out private events
-          sortedEvents = sortedEvents.filter((e)=> e.permission === "public");
-          this.setState({events: sortedEvents,
-                         activeEvent: sortedEvents[0]});
+          if(this.state.loggedIn === false){
+            sortedEvents = sortedEvents.filter((e)=> e.permission === "public");
+          }
+         
+          this.setState({events: sortedEvents});
         });
-  } 
+  }
 
   render() { 
     return ( 
@@ -36,6 +49,9 @@ class App extends React.Component {
                       "left-shift main-container" : 
                       "main-container"}> 
         <Header />
+        <LoginButton />
+        <LoginModal displayPrivate={() => { 
+            this.setState({loggedIn: true})}}/>
         <Sidebar
           isOpen={this.state.sidebarOpen}
           event={this.state.activeEvent}

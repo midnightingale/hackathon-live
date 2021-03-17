@@ -1,0 +1,24 @@
+.button{
+  cursor: pointer;
+  padding: .5em 1em;
+  display: inline-block;
+
+  color: #FFF6EE;
+  text-align: center;
+  background-color: #3C3B73;
+  border-radius: 8px;
+
+  transition: transform .2s;
+}
+
+.button:hover{
+  transform: scale(1.03);
+}
+
+.login{
+  position: absolute;
+  z-index: 100;
+  top: 0px;
+  right: 0px;
+  margin: 15px 30px;
+}
