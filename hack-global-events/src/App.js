@@ -9,7 +9,7 @@ class App extends React.Component {
     super(props); 
     this.state = {
       events: [], 
-      sidebarOpen: true, /*change to false later*/
+      sidebarOpen: false,
       activeEvent: {},
       loggedIn: false
     };
@@ -32,11 +32,13 @@ class App extends React.Component {
 
   render() { 
     return ( 
-      <div> 
+      <div className={(this.state.sidebarOpen) ? 
+                      "left-shift main-container" : 
+                      "main-container"}> 
         <Header />
         <Sidebar
           isOpen={this.state.sidebarOpen}
-          event={this.activeEvent}
+          event={this.state.activeEvent}
           close={() => { 
             this.setState({sidebarOpen: false})}}
         />  
@@ -47,8 +49,7 @@ class App extends React.Component {
                           this.setState({activeEvent: event,
                                          sidebarOpen: true})
                           console.log(this.state.activeEvent) /*this line for debugging*/
-                        }
-          }/>
+                       }}/>
           ))}
         </div>
       </div>
