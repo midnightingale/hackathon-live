@@ -9,7 +9,7 @@ class App extends React.Component {
     super(props); 
     this.state = {
       events: [], 
-      sidebarOpen: false,
+      sidebarOpen: true, /*change to false later*/
       activeEvent: {},
       loggedIn: false
     };
@@ -19,13 +19,15 @@ class App extends React.Component {
     fetch('https://api.hackthenorth.com/v3/graphql?query={ events { id name event_type permission start_time end_time description speakers { name profile_pic } public_url private_url related_events } }')
         .then(response => response.json())
         .then(dataIn => {
+          //sort by start time
           let sortedEvents = dataIn.data.events.sort(
             (a, b) => a.start_time - b.start_time
           );
+          //take out private events
+          sortedEvents = sortedEvents.filter((e)=> e.permission === "public");
           this.setState({events: sortedEvents,
                          activeEvent: sortedEvents[0]});
-        })
-        .then(console.log(this.state));
+        });
   } 
 
   render() { 
@@ -33,16 +35,20 @@ class App extends React.Component {
       <div> 
         <Header />
         <Sidebar
-          open={this.state.sidebarOpen}
+          isOpen={this.state.sidebarOpen}
           event={this.activeEvent}
+          close={() => { 
+            this.setState({sidebarOpen: false})}}
         />  
         <div className="events-container"> 
           {this.state.events.map((event) => (
             <EventCard event={event} 
-                       update={() => 
-                        {console.log(event)
-                        this.setState({activeEvent: event})}
-                      }/>
+                       update={() => { 
+                          this.setState({activeEvent: event,
+                                         sidebarOpen: true})
+                          console.log(this.state.activeEvent) /*this line for debugging*/
+                        }
+          }/>
           ))}
         </div>
       </div>
