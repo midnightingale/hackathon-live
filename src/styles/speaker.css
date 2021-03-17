@@ -1,0 +1,18 @@
+.horizontal-container{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 15px 0 0;
+}
+
+.speaker-pic{
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 100%;
+  border: 2px solid #3c3b73;
+}
+.speaker-name{
+  color:#0C5E96;
+  margin: 0;
+  padding: 0.3em 0 0 0;
+}

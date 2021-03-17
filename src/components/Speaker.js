@@ -10,8 +10,8 @@ function Speaker({name, pic}){
 
   return(
     <div className="horizontal-container">
-      <img src={picURL} alt="speaker" className="profile-pic"/>
-      <p>{name}</p>   
+      <img src={picURL} alt="speaker" className="speaker-pic"/>
+      <p className="speaker-name">{name}</p>   
     </div>
   )
 }

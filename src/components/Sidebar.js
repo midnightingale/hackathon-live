@@ -6,6 +6,8 @@ import Speaker from "./Speaker";
 
 function Sidebar({isOpen = false, event, close}){
   let sidebarVisibility = (isOpen === true) ? "sidebar" : "inactive";
+  //let speakers;
+
   return(
     <div className={sidebarVisibility}>
       <img src={arrow} alt="" className="back-arrow-image" onClick={close}/>
@@ -14,16 +16,20 @@ function Sidebar({isOpen = false, event, close}){
       <h2 className="sidebar-event-time">{getTime(event.start_time)} - {getTime(event.end_time)}</h2>
       <TypeTag type={event.event_type} location="sidebar-tt"/>
       
-      <h3>Speakers</h3>
-      {/*event.speakers.map((speaker) => (
-        <Speaker name={speaker.name}
+      {event.speakers && 
+      <div>
+        <h3>Speakers</h3>
+        {event.speakers.map((speaker) => (
+          <Speaker name={speaker.name}
                  pic={speaker.profile_pic}/>
-      ))*/}
-      
+        ))}
+      </div>}
+
       <h3>Description</h3>
       <p className="description-body">{event.description}</p>
 
       <h3>Related Events</h3>
+
       <a target="_blank" href={getURL(event)}>
         <div className="attend-button">attend</div>
       </a>

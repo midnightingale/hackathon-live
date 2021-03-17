@@ -9,8 +9,8 @@ class App extends React.Component {
     super(props); 
     this.state = {
       events: [], 
-      sidebarOpen: false,
       activeEvent: {},
+      sidebarOpen: false,
       loggedIn: false
     };
   }
