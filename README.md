@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+# Project writeup
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Structure, Design and Tools**
+I began by wireframing the app out on graph paper, and then translated it into a mockup as follows:
 
-## Available Scripts
+![hgi mockup](https://i.imgur.com/LAHWLZW.png "hgi mockup")
 
-In the project directory, you can run:
+I felt that each event would be best represented as a React component, so I used a React app to build it out. As there were several states that I wanted to keep track of (the event currently being shown in the sidebar, whether the user was logged in, whether the sidebar was open, etc.) I decided to use a class component for the main App component, so that the states were clearer and easier to manage. 
 
-### `npm start`
+If this schedule were part of a larger application, I would of course have built all of the above in a page component in the "pages" folder instead.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Roadblocks**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+**Points of pride**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+**Given additional time, how would you extend your application to become a fully functional product?**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Although in my initial submission I did not fully implement the sidebar components pictured in the mockup, I am working on that now and can easily make it happen, as the sidebar component is already receiving all of the information necessary. (Sorry, I ran out of time today!)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I would definitely like to implement headers for events on different days (i.e. a "January 12th" header for all events on that date), as well as the timeline pictured in the mockup. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I initially wanted the "location tracker" on the timeline of the mockup to represent the time of day at which the schedule was being viewed, but seeing as the events in the sample data were either on top of each other or spaced very far apart, I feel that a layout similar to my initial draft would work better for a schedule with events spaced fairly consistently over a day or two (like an MLH Local Hack Day perhaps)!
