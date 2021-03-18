@@ -12,7 +12,7 @@ I began by wireframing the app out on graph paper, and then translated it into a
 I felt that each event would be best represented as a React component, so I used a React app to build it out. As there were several states that I wanted to keep track of (the event currently being shown in the sidebar, whether the user was logged in, whether the sidebar was open, etc.), I decided to use a class component for the main App component, so that the states were clearer and easier to manage. With that being said, in hindsight it may have been cleaner to use React hooks with functional components entirely, as I could then rerender specific parts of the app as needed.
 
 ### Roadblocks
-Figuring out how to call various state-updating functions from child components was a big challenge for me, and navigating React's syntactic quirks to get there definitely took the longest time of all.
+Figuring out how to call various state-updating functions from child components was a challenge for me, and navigating React's syntactic quirks to get there definitely took quite a while.
 
 ### Parts I like
 I was quite proud of the degree to which I could follow my initial plan with the mockup, as well as all the new skills I learned from React and debugging with it!
