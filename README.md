@@ -9,6 +9,10 @@
 - add date header component
 - make app.js into functional component
   - fix rerendering + api request on event display change
+- add a virtual venue link (button)
+- fix sidebar states to be active vs inactive rather than inactive vs sidebar
+- make speaker component work with our urls (or keep photos locally)
+- rethink sidebar component update logic (whether it still needs the changeEvent as props)
 
 
 # Notes
