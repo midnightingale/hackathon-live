@@ -23,22 +23,30 @@ class App extends React.Component {
     this.grabEvents();
   }
 
+  // template for JSON api from google sheets: https://benborgers.com/posts/google-sheets-json
   grabEvents(){
-    fetch('https://api.hackthenorth.com/v3/graphql?query={ events { id name event_type permission start_time end_time description speakers { name profile_pic } public_url private_url related_events } }')
-        .then(response => response.json())
-        .then(dataIn => {
-          //sort by start time
-          let sortedEvents = dataIn.data.events.sort(
-            (a, b) => a.start_time - b.start_time
-          );
+    fetch("https://spreadsheets.google.com/feeds/list/1prC0JJpl7fpFOkaEUGu0vDXPVB8A6c4UIJmKNExd0yY/1/public/values?alt=json")
+      .then(res => res.json())
+      .then(json => {
+        const data = []; 
+        const rows = json.feed.entry;
 
-          //take out private events
-          if(this.state.loggedIn === false){
-            sortedEvents = sortedEvents.filter((e)=> e.permission === "public");
+        for(const row of rows) {
+          const formattedRow = {};
+
+          for(const key in row) {
+            if(key.startsWith("gsx$")) {
+              formattedRow[key.replace("gsx$", "")] = row[key].$t;
+            }
           }
-         
-          this.setState({events: sortedEvents});
-        });
+          data.push(formattedRow);
+        }
+        let sortedEvents = data.sort(
+          (a, b) => a.starttime - b.starttime
+        );
+        this.setState({events: sortedEvents}) //return data; (do this when functional component)
+        //console.log(this.state.events);
+      })
   }
 
   render() { 
