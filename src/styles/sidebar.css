@@ -1,6 +1,9 @@
 .inactive{
-  display: none;
-  width: 0px;
+  position: fixed;
+  top: 0px;
+  right: -300px;
+  width: 300px;
+  height: 90%;
   transition: all .3s linear;
 }
 
@@ -14,25 +17,27 @@
   z-index: 99;
   overflow: scroll;
   background-color: #FFE8DE;
+  transition: all .3s linear;
   filter: drop-shadow(-5px -5px 5px #3c3b732d);
 }
 
 .sidebar-event-name{
   letter-spacing: 0;
-  font-size: 2em;
+  font-size: 2.2em;
   margin: 1em 0 0.5em;
 }
 
 .sidebar-event-date{
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  font-style: italic;
   margin: 0 0 .2em;
   color: #073d7a;
 }
 
 .sidebar-event-time{
   font-weight: normal;
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin: 0 0 .5em;
   color: #0C5E96;
 }
@@ -47,6 +52,7 @@
 .description-body{
   font-family: Coves;
   font-weight: bold;
+  font-size: 1.3em;
   color: #63628F;
 }
 
@@ -73,6 +79,7 @@
 h3 {
   margin-block-start: 2em;
   margin-block-end: .2em;
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 1.3em;
 }
 
