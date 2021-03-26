@@ -12,3 +12,10 @@ h1{
   width: 100px;
   height: auto;
 }
+
+.subtitle{
+  font-weight: bolder;
+  letter-spacing: 1px;
+  padding: 0px;
+  margin: 0px;
+}

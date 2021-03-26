@@ -4,19 +4,19 @@
   color:#FFFFFF;
   border-radius: 100px;
   background-color: #ED767A;
-  font-weight: normal;
+  font-weight: bold;
 }
 
-.main-page-tt{
+.small-tt{
   position: absolute;
   margin: 0.5em;
   right: 0px;
   bottom: 0px;
   letter-spacing: 0.5px;
-  font-size: .7em;
+  font-size: .8em;
 }
 
-.sidebar-tt{
+.large-tt{
   font-size: medium;
   padding: .3em 1.5em;
   margin: 0;
@@ -26,10 +26,10 @@
   background-color: #ED767A;
 }
 
-.tech_talk{
+.vhHacks{
   background-color: #44ACDB;
 }
 
 .workshop{
-  background-color: #5ABCAA;
+  background-color: #a869db;
 }
