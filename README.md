@@ -13,6 +13,7 @@
 - fix sidebar states to be active vs inactive rather than inactive vs sidebar
 - make speaker component work with our urls (or keep photos locally)
 - rethink sidebar component update logic (whether it still needs the changeEvent as props)
+- fix newline in description
 
 
 # Notes

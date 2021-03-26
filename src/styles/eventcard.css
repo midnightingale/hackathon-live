@@ -17,7 +17,7 @@
 }
 
 .event-name{
-  padding: 1em 1em 1.85em;
+  padding: 1em 1em 0.7em 1em;
   margin: 0;
   font-weight: bold;
   font-size: 1.3em;
@@ -43,4 +43,10 @@
   background: linear-gradient(90deg, 
                             #debef8 0%, 
                             #c290eb 100%);
+}
+
+.eventcard-event-time{
+  padding: 0 0 0.7em 1.5em;
+  font-size: 0.9em;
+  color: #6c6297;
 }
