@@ -3,8 +3,6 @@ import React from "react";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import EventCard from "./components/EventCard";
-import LoginButton from './components/LoginButton';
-import LoginModal from './components/LoginModal';
 
 class App extends React.Component { 
   constructor(props) { 
@@ -49,9 +47,6 @@ class App extends React.Component {
                       "left-shift main-container" : 
                       "main-container"}> 
         <Header />
-        <LoginButton />
-        <LoginModal displayPrivate={() => { 
-            this.setState({loggedIn: true})}}/>
         <Sidebar
           isOpen={this.state.sidebarOpen}
           event={this.state.activeEvent}
