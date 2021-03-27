@@ -1,10 +1,14 @@
 import React from "react";
-import "../styles/eventlist.css";
+import EventCard from "./EventCard.js";
 
-export default function EventList(){
+export default function EventList({events, setActiveEvent}){
   return(
-    <div className={"type-tag " + type + " " + size}>
-      {type}
+    <div>
+      {events.map((event) => (
+          <EventCard 
+            event={event} 
+            setActiveEvent={setActiveEvent}/>)
+        )}
     </div>
   )
 }

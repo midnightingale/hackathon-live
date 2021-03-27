@@ -1,14 +1,11 @@
 import React from "react";
-import {getTime, getDate} from "../helpers/time.js";
+import {getTime} from "../helpers/time.js";
 
-export default function EventTime({event}){
-  const startTimestamp = event.starttime * 1000;
-  const endTimestamp = event.endtime * 1000;
-
+export default function EventTime({event, size}){
   return(
     <div>
-      <h2 className="eventcard-event-time">{getTime(startTimestamp)}
-          {endTimestamp!=0 && (" - " + getTime(endTimestamp))}</h2>
+      <h2 className={"eventcard-event-time " + size}>{getTime(event.starttime)}
+          {event.endtime!==0 && (" - " + getTime(event.endtime))}</h2>
     </div>
   )
 }

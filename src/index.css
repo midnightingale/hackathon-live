@@ -30,9 +30,7 @@ body {
   margin: 0;
   font-family: Kollektif;
   font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #0c0c4b;
+  color: #2a2a6e;
 }
 
 code {
