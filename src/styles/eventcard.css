@@ -9,7 +9,7 @@
   filter: drop-shadow(-5px 5px 5px #3c3b7344);
   border-radius:15px;
   transition: transform .2s;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 .card:hover{
