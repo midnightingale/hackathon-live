@@ -4,13 +4,13 @@ import defaultpic from "../assets/defaultpic.svg";
 
 function Speaker({name, pic}){
   let picURL = defaultpic;
-  if(pic !== null){
+  if(pic){
     picURL = pic;
   }
 
   return(
     <div className="horizontal-container">
-      <img src={picURL} alt="speaker" className="speaker-pic"/>
+      <img src={picURL} className="speaker-pic"/>
       <p className="speaker-name">{name}</p>   
     </div>
   )
