@@ -5,7 +5,7 @@ import "../styles/eventtime.css";
 export default function EventTime({event, size}){
   return(
     <div>
-      <h2 className={"event-time " + size}>{getTime(event.starttime)}
+      <h2 className={"event-time " + "et-" + size}>{getTime(event.starttime)}
           {event.endtime && (" - " + getTime(event.endtime))}</h2>
     </div>
   )
