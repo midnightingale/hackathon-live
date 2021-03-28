@@ -7,14 +7,14 @@ import EventTime from "./EventTime";
 import Speaker from "./Speaker";
 
 export default function Sidebar({isOpen, event, close}){
-  const sidebarVisibility = (isOpen) ? "sidebar" : "inactive";
+  const sidebarVisibility = (isOpen) ? "sidebar-active" : "sidebar-inactive";
 
   return(
-    <div className={sidebarVisibility}>
+    <div className={sidebarVisibility + " sidebar"}>
       <img src={arrow} alt="back" className="back-arrow-image" onClick={close}/>
       <h1 className="sidebar-event-name">{event.name}</h1>
       <h2 className="sidebar-event-date">{getDate(event.starttime)}</h2>
-      <EventTime className="sidebar-event-time" event={event}/>
+      <EventTime className="sidebar-event-time" event={event} size="large"/>
       <TypeTag type={event.eventtype} size="large-tt"/>
       
       {event.host && 

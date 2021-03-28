@@ -1,45 +1,38 @@
-.inactive{
-  position: fixed;
+.sidebar-inactive{
   top: 0px;
-  right: -300px;
-  width: 300px;
-  height: 90%;
-  transition: all .3s linear;
+  right: -600px;
+  transition: all .2s linear;
+}
+
+.sidebar-active{
+  top: 0px;
+  right: 0px;
+  transition: all .2s linear;
 }
 
 .sidebar{
   position: fixed;
-  top: 0px;
-  right: 0px;
-  height: 90%;
-  width: 300px;
   padding: 3em 3em 15em 3em;
   z-index: 99;
+  height: 100%;
+  width: 300px;
   overflow: scroll;
   background-color: #FFE8DE;
-  transition: all .3s linear;
   filter: drop-shadow(-5px -5px 5px #3c3b732d);
 }
 
 .sidebar-event-name{
   letter-spacing: 0;
-  font-size: 2.2em;
+  font-size: 2em;
   margin: 1em 0 0.5em;
 }
 
 .sidebar-event-date{
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-style: italic;
   margin: 0 0 .2em;
   color: #073d7a;
-}
-
-.sidebar-event-time{
-  font-weight: normal;
-  font-size: 1.5em;
-  margin: 0 0 .5em;
-  color: #0C5E96;
 }
 
 .back-arrow-image{
@@ -51,7 +44,7 @@
 .description-body{
   font-family: Coves;
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #63628F;
 }
 

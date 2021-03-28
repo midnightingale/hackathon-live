@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/speaker.css";
-import defaultpic from "../assets/defaultpic.svg";
+import defaultpic from "../assets/defaultpic.png";
 
 function Speaker({name, pic}){
   let picURL = defaultpic;
