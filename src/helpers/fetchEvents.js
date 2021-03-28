@@ -21,8 +21,6 @@ export function fetchEvents() {
       let sortedEvents = data.sort(
         (a, b) => a.starttime - b.starttime
       );
-      
-      console.log(sortedEvents);
       return sortedEvents; 
   })
 }
