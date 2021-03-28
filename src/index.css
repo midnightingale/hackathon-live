@@ -31,6 +31,13 @@ body {
   font-family: Kollektif;
   font-weight: normal;
   color: #2a2a6e;
+  background: #ebfffe;
+  background: linear-gradient(180deg, 
+                            #ebfffe 0%,
+                            #6db7e9 50%, 
+                            #4029a5 100%) no-repeat;
+  background-size: cover;  
+  height: 100%;    
 }
 
 code {
