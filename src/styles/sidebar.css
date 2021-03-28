@@ -14,7 +14,7 @@
   position: fixed;
   padding: 3em;
   z-index: 99;
-  height: 90%;
+  height: calc(100vh - 6em);
   width: 300px;
   overflow: auto;
   background-color: #FFE8DE;
