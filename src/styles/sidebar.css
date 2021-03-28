@@ -16,7 +16,7 @@
   z-index: 99;
   height: 90%;
   width: 300px;
-  overflow: scroll;
+  overflow: auto;
   background-color: #FFE8DE;
   filter: drop-shadow(-5px -5px 5px #3c3b732d);
 }
@@ -42,7 +42,7 @@
 }
 
 .description-body{
-  font-family: Coves;
+  font-family: Kollektif;
   font-weight: bold;
   font-size: 1.2em;
   color: #63628F;
