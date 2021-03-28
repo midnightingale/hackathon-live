@@ -1,30 +1,29 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
-import {fetchEvents} from "./helpers/fetchEvents.js";
+import React, { useState, useEffect, useRef } from 'react';
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import EventList from "./components/EventList";
 
 export default function App(){
-  const [events, setEvents] = useState([]);
   const [activeEvent, setActiveEvent] = useState({});
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  useEffect(() => {
-    fetchEvents().then(response => setEvents(response)); 
-  }, []);
+  const initialLoad = useRef(false);
+
+  
+  useEffect(()=> {if(initialLoad.current) setSidebarOpen(true)}, [activeEvent]);
+  useEffect(()=>{initialLoad.current = true}, []);
 
   return(
     <div className={sidebarOpen ? 
                     "left-shift main-container" : 
                     "main-container"}> 
       <Header />
-      {/*<Sidebar
+      <Sidebar
         isOpen={sidebarOpen}
         event={activeEvent}
         close={() => setSidebarOpen(false)}
-      />*/}  
-      <EventList events={events}
-        setActiveEvent={setActiveEvent}/>
+      /> 
+      <EventList setActiveEvent={setActiveEvent}/>
     </div>
   );
 }
