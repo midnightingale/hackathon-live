@@ -25,7 +25,6 @@ export default function Sidebar({isOpen, event, close}){
 
       <h3 className="sidebar-header">Description</h3>
       <p className="description-body">{event.description}
-      {event.description && <br />}
       {"Join us in " + event.location + " of the vhHacks Virtual Venue to participate."}
       </p>
     </div>
