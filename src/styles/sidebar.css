@@ -43,8 +43,9 @@
 
 .description-body{
   font-family: Kollektif;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1.2em;
+  line-height: 1.4em;
   color: #63628F;
 }
 
