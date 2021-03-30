@@ -1,18 +1,22 @@
-.inactive{
-  display: none;
-  width: 0px;
-  transition: all .3s linear;
+.sidebar-inactive{
+  top: 0px;
+  right: -600px;
+  transition: all .2s linear;
+}
+
+.sidebar-active{
+  top: 0px;
+  right: 0px;
+  transition: all .2s linear;
 }
 
 .sidebar{
   position: fixed;
-  top: 0px;
-  right: 0px;
-  height: 90%;
-  width: 300px;
-  padding: 3em 3em 15em 3em;
+  padding: 3em;
   z-index: 99;
-  overflow: scroll;
+  height: calc(100vh - 6em);
+  width: 300px;
+  overflow: auto;
   background-color: #FFE8DE;
   filter: drop-shadow(-5px -5px 5px #3c3b732d);
 }
@@ -25,16 +29,10 @@
 
 .sidebar-event-date{
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1.3em;
+  font-style: italic;
   margin: 0 0 .2em;
   color: #073d7a;
-}
-
-.sidebar-event-time{
-  font-weight: normal;
-  font-size: 1.2em;
-  margin: 0 0 .5em;
-  color: #0C5E96;
 }
 
 .back-arrow-image{
@@ -43,13 +41,13 @@
   height: auto;
 }
 
-
 .description-body{
-  font-family: Coves;
-  font-weight: bold;
+  font-family: Kollektif;
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 1.4em;
   color: #63628F;
 }
-
 
 .attend-button{
   text-decoration: none;
@@ -73,6 +71,6 @@
 h3 {
   margin-block-start: 2em;
   margin-block-end: .2em;
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 1.3em;
 }
-

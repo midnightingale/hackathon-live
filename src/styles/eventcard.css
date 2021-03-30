@@ -6,7 +6,7 @@
   background: linear-gradient(90deg, 
                             #F5C6BF 0%, 
                             #F49F98 100%);
-  filter: drop-shadow(5px 5px 5px #3c3b7344);
+  filter: drop-shadow(-5px 5px 5px #3c3b7344);
   border-radius:15px;
   transition: transform .2s;
   cursor: pointer;
@@ -17,10 +17,11 @@
 }
 
 .event-name{
-  padding: 1em 1em 1.85em;
+  padding: 1em 1em 0.7em 1em;
   margin: 0;
-  font-weight: normal;
-  color: #0C5E96;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #464786;
 }
 
 .activity-card{
@@ -30,16 +31,16 @@
                             #F49F98 100%);
 }
 
-.tech_talk-card{
+.vhHacks-card{
   background: #BEE2EA;
   background: linear-gradient(90deg, 
-                            #BEE2EA 0%, 
+                            #c4e7f1 0%, 
                             #7ACDE7 100%);
 }
 
 .workshop-card{
-  background: #AFEAA6;
+  background: #debef8;
   background: linear-gradient(90deg, 
-                            #AFEAA6 0%, 
-                            #7ACDA9 100%);
+                            #debef8 0%, 
+                            #c290eb 100%);
 }

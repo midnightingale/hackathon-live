@@ -1,27 +1,43 @@
 @font-face {
-  font-family: 'Somatic';
-  src: local('Somatic-Rounded'), url(./fonts/Somatic-Rounded.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'Coves';
-  src: local('Coves-Light'), url(./fonts/Coves-Light.otf) format('opentype');
-  font-weight: light;
-}
-
-@font-face {
-  font-family: 'Coves';
-  src: local('Coves-Bold'), url(./fonts/Coves-Bold.otf) format('opentype');
+  font-family: 'Kollektif';
+  src: local('Kollektif-Bold'), url(./fonts/Kollektif-Bold.ttf) format('truetype');
   font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kollektif';
+  src: local('Kollektif-BoldItalic'), url(./fonts/Kollektif-BoldItalic.ttf) format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Kollektif';
+  src: local('Kollektif-Italic'), url(./fonts/Kollektif-Italic.ttf) format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Kollektif';
+  src: local('Kollektif'), url(./fonts/Kollektif.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
   margin: 0;
-  font-family: Somatic;
+  font-family: Kollektif;
   font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #4A4A6B;
+  color: #2a2a6e;
+  background: #ebfffe;
+  background: linear-gradient(180deg, 
+                            #ebfffe 0%,
+                            #6db7e9 50%, 
+                            #4029a5 100%) no-repeat;
+  background-size: cover;  
+  height: 100%;    
 }
 
 code {
@@ -30,8 +46,8 @@ code {
 }
 
 h1 {
-  font-family: Somatic;
-  font-weight: normal;
+  font-family: Kollektif;
+  font-weight: 800;
 }
 
 .main-container{
